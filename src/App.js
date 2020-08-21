@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ResumeHeader from './components/ResumeHeader';
 import ResumeContent from './components/resume-contents/ResumeContent';
