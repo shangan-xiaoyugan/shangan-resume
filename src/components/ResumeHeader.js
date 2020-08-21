@@ -7,6 +7,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import './ResumeHeader.css';
 import Snackbar from '@material-ui/core/Snackbar';
 import Alert from '@material-ui/lab/Alert';
+import ReactGA from 'react-ga';
 
 // React 16.8 React hook
 export default function ResumeHeader() {
@@ -39,6 +40,11 @@ export default function ResumeHeader() {
     );
 
     function handleEmailButtonClick() {
+        // send email button click event
+        ReactGA.event({
+            category: "User",
+            action: "Email button clicked"
+        });
         navigator.clipboard.writeText(resumeContent.email)
             .then(() => {
                 setOpenSnackBar(true);
@@ -50,6 +56,11 @@ export default function ResumeHeader() {
     }
 
     function handleGithubClick() {
+        // send github button click event
+        ReactGA.event({
+            category: "User",
+            action: "Github button clicked"
+        });
         window.open(`https://github.com/${resumeContent.github}`);
     }
 }
