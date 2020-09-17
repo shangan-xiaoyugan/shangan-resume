@@ -1,5 +1,5 @@
 export const resumeContent = {
-    name: "王大力",
+    name: "Dali Wang",
     title: "Software Engineer",
     location: "Bay Area",
     selfIntro: "I'm lazy, nothing to tell.",
